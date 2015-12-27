@@ -76,7 +76,7 @@ namespace core{
                 T *ptr,
                 double eps,
                 size_t feat_dim){
-            std::vector<std::string> data = ReadCSV("../data/car_nor.csv");
+            std::vector<std::string> data = ReadCSV("../data/pca.csv");
             ptr->beginDataScan(partition(data,1,0,feat_dim), feat_dim);
             boost::mpi::environment env(argc, argv);
             boost::mpi::communicator world;
